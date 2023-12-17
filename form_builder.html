@@ -1,0 +1,14 @@
+<!-- form_builder.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Form Builder</h2>
+  <p>Name: {{ custom_form.name }}</p>
+  <p>Description: {{ custom_form.description }}</p>
+  <h3>Form Fields:</h3>
+  <ul>
+    {% for field in form_fields %}
+      <li>{{ field.label }} - {{ field.field_type }} - {{ field.is_required }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

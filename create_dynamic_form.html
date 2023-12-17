@@ -1,0 +1,15 @@
+<!-- create_dynamic_form.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Create Dynamic Form{{ }}</h2>
+  <!-- <form method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form> -->
+  <button hx-get='{% url "create_dynamic_form"%}' hx-swap="outerHTML" hx-target="#forms"></button>
+  <div id="forms">
+
+  </div>
+{% endblock %}
